@@ -11,7 +11,7 @@ api_key = 'your_api_key_here'
 
 soup = BeautifulSoup(html, 'html.parser')
 
-# 列表pip
+# 列表
 contact_list = []
 
 # 將每個店整理成各筆資料
