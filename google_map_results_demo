@@ -1,0 +1,68 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "16",
+               "short_name" : "16",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "國昌路",
+               "short_name" : "國昌路",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "竹南里",
+               "short_name" : "竹南里",
+               "types" : [ "administrative_area_level_4", "political" ]
+            },
+            {
+               "long_name" : "路竹區",
+               "short_name" : "路竹區",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "高雄市",
+               "short_name" : "高雄市",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "台灣",
+               "short_name" : "TW",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "821",
+               "short_name" : "821",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "821台灣高雄市路竹區國昌路16號",
+         "geometry" : {
+            "location" : {
+               "lat" : 22.8543452,
+               "lng" : 120.2605801
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 22.8556512802915,
+                  "lng" : 120.2619243802915
+               },
+               "southwest" : {
+                  "lat" : 22.85295331970849,
+                  "lng" : 120.2592264197085
+               }
+            }
+         },
+         "place_id" : "ChIJ1Ui3MJoMbjQRtDnibskl4D8",
+         "plus_code" : {
+            "compound_code" : "V736+P6 台灣高雄市路竹區",
+            "global_code" : "7QJ2V736+P6"
+         },
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
