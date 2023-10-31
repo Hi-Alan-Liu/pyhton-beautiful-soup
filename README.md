@@ -17,12 +17,13 @@ pip install openpyxl
 # Call Api 套件
 pip install requests
 ```
-
-## 取得 Google API Key
-
-![取得 Google API Key](/1698737355339.jpg)
-
 ### Run
 ```
 python start.py
 ```
+
+## 補充
+### 取得 Google API Key 位置
+
+![取得 Google API Key](/img/1698737355339.jpg)
+
