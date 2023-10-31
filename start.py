@@ -1,3 +1,5 @@
+# encoding:utf-8
+
 from bs4 import BeautifulSoup
 import pandas as pd
 import json
@@ -30,7 +32,7 @@ for store_info in store_infos:
     # 解析電話
     tel = store_info.find('div', class_='tel').text.split('電話')[1]
 
-    # 建立 URL
+    # 建立 GOOGLE API URL
     url = f"https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={api_key}"
 
     # 發送請求
@@ -39,23 +41,29 @@ for store_info in store_infos:
     # 解析回傳的 JSON 資料
     data = json.loads(response.text)
 
-    # 取得經緯度
-    lat = data["results"][0]["geometry"]["location"]["lat"]
-    lng = data["results"][0]["geometry"]["location"]["lng"]
+    if data["status"] == "OK":
+        
+        # 取得經緯度
+        lat = data["results"][0]["geometry"]["location"]["lat"]
+        lng = data["results"][0]["geometry"]["location"]["lng"]
 
 
-    # 建立字典
-    contact_info = {
-        'name': store_name,
-        'address': address,
-        'link': map_link,
-        'tel': tel,
-        'lat': lat,
-        'lng': lng
-    }
+        # 建立字典
+        contact_info = {
+            'name': store_name,
+            'address': address,
+            'link': map_link,
+            'tel': tel,
+            'lat': lat,
+            'lng': lng
+        }
 
-    # 把字典放進列表
-    contact_list.append(contact_info)
+        # 把字典放進列表
+        contact_list.append(contact_info)
+    else:
+        print("GOOGLE API ERROR")
+        print(url)
+        print(data)
 
 print(contact_list)
 
